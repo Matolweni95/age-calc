@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'age-calc';
+  year = new Date().getFullYear();
+  calc: any;
+  test:any;
+  
+  
+  age(){
+    let type = (<HTMLInputElement>document.getElementById('a')).value;
+    this.test = type
+    this.calc = this.year - this.test;
+
+  }
 }
